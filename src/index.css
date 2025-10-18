@@ -1,10 +1,8 @@
-/* ✅ 1. Import your fonts FIRST (required by PostCSS) */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* ✅ 1. Import Tailwind v4 core */
+@import "tailwindcss";
 
-/* ✅ 2. Then Tailwind layers */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* ✅ 2. Import fonts (comes AFTER Tailwind in v4) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /* 🌌 3. Global styles */
 body {
@@ -30,7 +28,7 @@ html {
   }
 }
 
-/* 🎨 5. Scrollbar styling (optional, looks beautiful on dark theme) */
+/* 🎨 5. Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -44,7 +42,7 @@ html {
   border-radius: 10px;
 }
 
-/* 🪶 Optional: Smooth text rendering for better readability */
+/* 🪶 6. Smooth text rendering */
 body, h1, h2, h3, h4, h5, h6, p {
   -webkit-font-smoothing: antialiased;
 }
