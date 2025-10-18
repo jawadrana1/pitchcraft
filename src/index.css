@@ -1,10 +1,10 @@
-/* ✅ 1. Import Tailwind v4 core */
+
 @import "tailwindcss";
 
-/* ✅ 2. Import fonts (comes AFTER Tailwind in v4) */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/* 🌌 3. Global styles */
+
 body {
   font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
@@ -16,7 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 🧈 Smooth transitions for interactive UI */
+
 * {
   transition: all 0.25s ease-in-out;
 }
@@ -28,7 +28,7 @@ html {
   }
 }
 
-/* 🎨 5. Scrollbar styling */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -42,7 +42,7 @@ html {
   border-radius: 10px;
 }
 
-/* 🪶 6. Smooth text rendering */
+
 body, h1, h2, h3, h4, h5, h6, p {
   -webkit-font-smoothing: antialiased;
 }

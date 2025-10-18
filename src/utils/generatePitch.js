@@ -26,7 +26,7 @@ export const generatePitch = async (idea, engine = "Gemini") => {
   try {
     if (engine === "Gemini") {
       // ✅ Use Google Gemini (frontend)
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
       const prompt = `
         Generate a creative startup pitch for this idea: "${idea}".
@@ -70,7 +70,7 @@ export const generatePitch = async (idea, engine = "Gemini") => {
       };
     }
   } catch (error) {
-    console.error("❌ Error generating pitch:", error);
+    console.error("Error generating pitch:", error);
     return {
       name: "FallbackAI",
       tagline: "Ideas Never Stop.",
