@@ -1,0 +1,51 @@
+/* ✅ 1. Import your fonts FIRST (required by PostCSS) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* ✅ 2. Then Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌌 3. Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%);
+  color: #f9fafb;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🧈 Smooth transitions for interactive UI */
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+/* 🪩 4. Reusable glassmorphic card design */
+@layer components {
+  .glass-card {
+    @apply bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-teal-500/30 transition-all duration-300;
+  }
+}
+
+/* 🎨 5. Scrollbar styling (optional, looks beautiful on dark theme) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #14b8a6);
+  border-radius: 10px;
+}
+
+/* 🪶 Optional: Smooth text rendering for better readability */
+body, h1, h2, h3, h4, h5, h6, p {
+  -webkit-font-smoothing: antialiased;
+}
+
